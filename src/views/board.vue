@@ -1,6 +1,6 @@
 <template>
-  <div class="board w-full h-full bg-sky-100 flex p-10">
-    <todo-list v-for="(list, index) in lists" :key="`list_${index}`" :list="list" />
+  <div class="board w-full h-full bg-sky-100 p-10 flex gap-x-8">
+    <todo-list v-for="(list, index) in lists" :key="`list_${index}`" v-model:list="lists[index]" />
   </div>
 </template>
 
@@ -18,19 +18,27 @@ export default defineComponent({
     return {
       lists: reactive([
         {
+          listId: 0,
           name: 'Todo',
-          todoList: [
+          todos: [
             {
+              id: 0,
               title: 'Todo1',
               content: '',
               members: [],
             },
             {
+              id: 1,
               title: 'Todo2',
               content: '',
               members: [],
             },
           ],
+        },
+        {
+          listId: 1,
+          name: 'Doing',
+          todos: [],
         },
       ]),
     };
