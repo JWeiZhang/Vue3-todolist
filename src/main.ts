@@ -1,4 +1,5 @@
 import './assets/css/tailwind.css';
+import './assets/css/custom.scss';
 
 import { createApp } from 'vue';
 

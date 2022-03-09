@@ -1,6 +1,6 @@
 <template>
-  <div class="todo-list-item bg-white hover:bg-gray-100 rounded-lg p-2 select-none cursor-pointer">
-    {{ todoItem.title }}
+  <div class="card-list-item bg-white hover:bg-gray-100 rounded-lg p-2 select-none cursor-pointer">
+    {{ cardItem.title }}
   </div>
 </template>
 
@@ -8,9 +8,9 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'TodoListItem',
+  name: 'CardListItem',
   props: {
-    todoItem: {
+    cardItem: {
       type: Object,
       default: () => ({}),
       required: true,
